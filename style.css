@@ -618,4 +618,47 @@ img {
   }
 }
 
-/* Auto */
+/* Puhelin fiksaus*/
+
+@media (max-width: 600px) {
+  /* Piilotetaan yläpalkki puhelimessa */
+  .nav {
+    display: none;
+  }
+
+  /* Hero-osion koko */
+  .hero {
+    min-height: 75svh;
+    padding: 0;
+  }
+
+  .hero-content {
+    min-height: 75svh;
+    padding: 28px 20px;
+    justify-content: space-between;
+  }
+
+  /* Etunimi ja sukunimi pienemmiksi */
+  .hero-top .hero-name-first,
+  .hero-name-last {
+    font-size: clamp(42px, 12vw, 68px);
+    line-height: 1;
+  }
+
+  /* Nimi, rooli ja painike vasemmalle */
+  .hero-bottom {
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .hero-role {
+    font-size: 16px;
+  }
+
+  .hero-cta {
+    align-self: flex-start;
+    padding: 12px 22px;
+    font-size: 14px;
+  }
+}
