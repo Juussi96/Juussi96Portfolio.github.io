@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jussi Sukunimi — UI/UX Designer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <script src="script.js" defer></script>
+  <body>
+    <!-- ══ NAV ══════════════════════════════════════════════════════════ -->
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><button data-section="contact">Contact</button></li>
+        <li><button data-section="portfolio">Portfolio</button></li>
+        <li><button data-section="skills">Skills</button></li>
+      </ul>
+
+      <!-- <span class="nav-logo">Jussi Haverinen</span> -->
+
+      <div class="nav-icons">
+        <a
+          href="https://havjussi.wordpress.com/portfolio/"
+          aria-label="WordPress"
+        >
+          <svg width="36" height="36" viewBox="0 0 39.8134 40.0002" fill="none">
+            <path
+              d="M20.0793 2.99513e-05C12.244 -0.01361 4.86914 4.63251 1.48458 11.9868L11.0013 12.0094V13.0502C8.0709 12.6976 8.32894 14.2194 8.74378 15.8345L14.9911 31.4917L19.5829 20.728L17.4749 15.6837C16.7093 14.3326 16.6931 12.8337 13.5606 12.9748L13.6046 12.0157L27.5623 12.0497V13.1244C25.9277 13.2203 23.9601 12.7135 25.0031 16.0608L30.6483 30.8896L33.7343 22.2326C34.7448 18.6037 33.7937 15.1162 32.5929 11.6964C31.925 9.40223 32.2365 7.48627 35.2301 6.72623C30.6607 2.06203 25.2691 0.00906995 20.0795 2.99513e-05H20.0793ZM39.0625 13.69L30.0134 37.2776C32.5124 35.1132 35.0748 34.3253 38.2103 28.3365C40.2965 23.3553 40.0817 18.7407 39.0625 13.69V13.69ZM0.526741 14.0722C-0.356499 21.0356 -0.275699 23.0751 1.9107 28.7615C4.7607 34.2076 6.97078 35.3551 10.1076 37.4913L0.526741 14.0722ZM20.4326 22.9076L13.7265 39.0877C18.4337 40.4312 22.6456 40.2631 26.5014 38.7684L20.4326 22.9076Z"
+              fill="white"
+            />
+          </svg>
+        </a>
+        <a href="https://github.com/Juussi96" aria-label="GitHub">
+          <svg width="36" height="36" viewBox="0 0 40 40" fill="none">
+            <path
+              clip-rule="evenodd"
+              d="M20 0C8.95 0 0 8.95 0 20C0 28.85 5.725 36.325 13.675 38.975C14.675 39.15 15.05 38.55 15.05 38.025C15.05 37.55 15.025 35.975 15.025 34.3C10 35.225 8.7 33.075 8.3 31.95C8.075 31.375 7.1 29.6 6.25 29.125C5.55 28.75 4.55 27.825 6.225 27.8C7.8 27.775 8.925 29.25 9.3 29.85C11.1 32.875 13.975 32.025 15.125 31.5C15.3 30.2 15.825 29.325 16.4 28.825C11.95 28.325 7.3 26.6 7.3 18.95C7.3 16.775 8.075 14.975 9.35 13.575C9.15 13.075 8.45 11.025 9.55 8.275C9.55 8.275 11.225 7.75 15.05 10.325C16.65 9.875 18.35 9.65 20.05 9.65C21.75 9.65 23.45 9.875 25.05 10.325C28.875 7.725 30.55 8.275 30.55 8.275C31.65 11.025 30.95 13.075 30.75 13.575C32.025 14.975 32.8 16.75 32.8 18.95C32.8 26.625 28.125 28.325 23.675 28.825C24.4 29.45 25.025 30.65 25.025 32.525C25.025 35.2 25 37.35 25 38.025C25 38.55 25.375 39.175 26.375 38.975C30.3453 37.6345 33.7953 35.0828 36.2394 31.6789C38.6836 28.2751 39.9988 24.1905 40 20C40 8.95 31.05 0 20 0Z"
+              fill="white"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+      </div>
+    </nav>
+
+    <!-- ══ HERO ══════════════════════════════════════════════════════════ -->
+    <section class="hero">
+      <img class="hero-bg" src="pictures/HeroTUMMA.jpg" alt="herokuva" />
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <div class="hero-top">
+          <span class="hero-name-first">JUSSI</span>
+        </div>
+
+        <div class="hero-bottom">
+          <span class="hero-name-last">HAVERINEN</span>
+          <span class="hero-role">UI/UX Designer, AWS - Cloud</span>
+          <button class="hero-cta" data-open="contact">OTA YHTEYTTÄ</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ SECTIONS ══════════════════════════════════════════════════════ -->
+    <div class="sections" id="sections">
+      <!-- Contact -->
+      <div class="section" id="section-contact">
+        <button
+          class="section-header"
+          aria-expanded="false"
+          data-target="contact"
+        >
+          <span class="section-title">YHTEYSTIEDOT</span>
+          <span class="section-toggle">+</span>
+        </button>
+        <div class="section-body">
+          <div class="section-inner">
+            <div class="contact-content">
+              <div>
+                <div class="contact-items">
+                  <div class="contact-item">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24.3759 24.3759"
+                      fill="none"
+                    >
+                      <path
+                        d="M12.188 0.000457764C13.311 0.000457764 14.3901 0.146942 15.4253 0.439911C16.4604 0.73288 17.4272 1.14304 18.3257 1.67038C19.2241 2.19772 20.0493 2.83249 20.8012 3.57468C21.5532 4.31686 22.188 5.13718 22.7055 6.03561C23.2231 6.93405 23.6333 7.90573 23.936 8.95065C24.2387 9.99557 24.3852 11.0747 24.3755 12.188C24.3755 13.311 24.229 14.3901 23.936 15.4253C23.643 16.4604 23.2329 17.4272 22.7055 18.3257C22.1782 19.2241 21.5434 20.0493 20.8012 20.8012C20.0591 21.5532 19.2387 22.188 18.3403 22.7055C17.4419 23.2231 16.4702 23.6333 15.4253 23.936C14.3803 24.2387 13.3012 24.3852 12.188 24.3755C11.0649 24.3755 9.98581 24.229 8.95065 23.936C7.9155 23.643 6.9487 23.2329 6.05026 22.7055C5.15182 22.1782 4.32663 21.5434 3.57468 20.8012C2.82272 20.0591 2.18796 19.2387 1.67038 18.3403C1.1528 17.4419 0.742645 16.4702 0.439911 15.4253C0.137177 14.3803 -0.00930786 13.3012 0.000457764 12.188C0.000457764 11.0649 0.146942 9.98581 0.439911 8.95065C0.73288 7.9155 1.14304 6.9487 1.67038 6.05026C2.19772 5.15182 2.83249 4.32663 3.57468 3.57468C4.31686 2.82272 5.13718 2.18796 6.03561 1.67038C6.93405 1.1528 7.90573 0.742645 8.95065 0.439911C9.99557 0.137177 11.0747 -0.00930786 12.188 0.000457764Z"
+                        fill="#e1b07e"
+                      />
+                    </svg>
+                    <div>
+                      <p class="contact-item-label">Sähköposti</p>
+                      <p class="contact-item-value">jussi.hav@gmail.com</p>
+                    </div>
+                  </div>
+                  <div class="contact-item"></div>
+                  <div class="contact-item">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24.3759 24.3759"
+                      fill="none"
+                    >
+                      <path
+                        d="M12.188 0.000457764C13.311 0.000457764 14.3901 0.146942 15.4253 0.439911C16.4604 0.73288 17.4272 1.14304 18.3257 1.67038C19.2241 2.19772 20.0493 2.83249 20.8012 3.57468C21.5532 4.31686 22.188 5.13718 22.7055 6.03561C23.2231 6.93405 23.6333 7.90573 23.936 8.95065C24.2387 9.99557 24.3852 11.0747 24.3755 12.188C24.3755 13.311 24.229 14.3901 23.936 15.4253C23.643 16.4604 23.2329 17.4272 22.7055 18.3257C22.1782 19.2241 21.5434 20.0493 20.8012 20.8012C20.0591 21.5532 19.2387 22.188 18.3403 22.7055C17.4419 23.2231 16.4702 23.6333 15.4253 23.936C14.3803 24.2387 13.3012 24.3852 12.188 24.3755C11.0649 24.3755 9.98581 24.229 8.95065 23.936C7.9155 23.643 6.9487 23.2329 6.05026 22.7055C5.15182 22.1782 4.32663 21.5434 3.57468 20.8012C2.82272 20.0591 2.18796 19.2387 1.67038 18.3403C1.1528 17.4419 0.742645 16.4702 0.439911 15.4253C0.137177 14.3803 -0.00930786 13.3012 0.000457764 12.188C0.000457764 11.0649 0.146942 9.98581 0.439911 8.95065C0.73288 7.9155 1.14304 6.9487 1.67038 6.05026C2.19772 5.15182 2.83249 4.32663 3.57468 3.57468C4.31686 2.82272 5.13718 2.18796 6.03561 1.67038C6.93405 1.1528 7.90573 0.742645 8.95065 0.439911C9.99557 0.137177 11.0747 -0.00930786 12.188 0.000457764Z"
+                        fill="#e1b07e"
+                      />
+                    </svg>
+                    <div>
+                      <p class="contact-item-label">Sijainti</p>
+                      <p class="contact-item-value">Jyväskylä, Suomi</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="contact-items">
+                  <div class="contact-item">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24.3759 24.3759"
+                      fill="none"
+                    >
+                      <path
+                        d="M12.188 0.000457764C13.311 0.000457764 14.3901 0.146942 15.4253 0.439911C16.4604 0.73288 17.4272 1.14304 18.3257 1.67038C19.2241 2.19772 20.0493 2.83249 20.8012 3.57468C21.5532 4.31686 22.188 5.13718 22.7055 6.03561C23.2231 6.93405 23.6333 7.90573 23.936 8.95065C24.2387 9.99557 24.3852 11.0747 24.3755 12.188C24.3755 13.311 24.229 14.3901 23.936 15.4253C23.643 16.4604 23.2329 17.4272 22.7055 18.3257C22.1782 19.2241 21.5434 20.0493 20.8012 20.8012C20.0591 21.5532 19.2387 22.188 18.3403 22.7055C17.4419 23.2231 16.4702 23.6333 15.4253 23.936C14.3803 24.2387 13.3012 24.3852 12.188 24.3755C11.0649 24.3755 9.98581 24.229 8.95065 23.936C7.9155 23.643 6.9487 23.2329 6.05026 22.7055C5.15182 22.1782 4.32663 21.5434 3.57468 20.8012C2.82272 20.0591 2.18796 19.2387 1.67038 18.3403C1.1528 17.4419 0.742645 16.4702 0.439911 15.4253C0.137177 14.3803 -0.00930786 13.3012 0.000457764 12.188C0.000457764 11.0649 0.146942 9.98581 0.439911 8.95065C0.73288 7.9155 1.14304 6.9487 1.67038 6.05026C2.19772 5.15182 2.83249 4.32663 3.57468 3.57468C4.31686 2.82272 5.13718 2.18796 6.03561 1.67038C6.93405 1.1528 7.90573 0.742645 8.95065 0.439911C9.99557 0.137177 11.0747 -0.00930786 12.188 0.000457764Z"
+                        fill="#e1b07e"
+                      />
+                    </svg>
+                    <div>
+                      <p class="contact-item-label">Github</p>
+                      <p class="contact-item-value">
+                        https://github.com/Juussi96
+                      </p>
+                    </div>
+                  </div>
+                  <div class="contact-item"></div>
+                  <div class="contact-item">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24.3759 24.3759"
+                      fill="none"
+                    >
+                      <path
+                        d="M12.188 0.000457764C13.311 0.000457764 14.3901 0.146942 15.4253 0.439911C16.4604 0.73288 17.4272 1.14304 18.3257 1.67038C19.2241 2.19772 20.0493 2.83249 20.8012 3.57468C21.5532 4.31686 22.188 5.13718 22.7055 6.03561C23.2231 6.93405 23.6333 7.90573 23.936 8.95065C24.2387 9.99557 24.3852 11.0747 24.3755 12.188C24.3755 13.311 24.229 14.3901 23.936 15.4253C23.643 16.4604 23.2329 17.4272 22.7055 18.3257C22.1782 19.2241 21.5434 20.0493 20.8012 20.8012C20.0591 21.5532 19.2387 22.188 18.3403 22.7055C17.4419 23.2231 16.4702 23.6333 15.4253 23.936C14.3803 24.2387 13.3012 24.3852 12.188 24.3755C11.0649 24.3755 9.98581 24.229 8.95065 23.936C7.9155 23.643 6.9487 23.2329 6.05026 22.7055C5.15182 22.1782 4.32663 21.5434 3.57468 20.8012C2.82272 20.0591 2.18796 19.2387 1.67038 18.3403C1.1528 17.4419 0.742645 16.4702 0.439911 15.4253C0.137177 14.3803 -0.00930786 13.3012 0.000457764 12.188C0.000457764 11.0649 0.146942 9.98581 0.439911 8.95065C0.73288 7.9155 1.14304 6.9487 1.67038 6.05026C2.19772 5.15182 2.83249 4.32663 3.57468 3.57468C4.31686 2.82272 5.13718 2.18796 6.03561 1.67038C6.93405 1.1528 7.90573 0.742645 8.95065 0.439911C9.99557 0.137177 11.0747 -0.00930786 12.188 0.000457764Z"
+                        fill="#e1b07e"
+                      />
+                    </svg>
+                    <div>
+                      <p class="contact-item-label">WordPress</p>
+                      <p class="contact-item-value">
+                        https://havjussi.wordpress.com/portfolio/
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Portfolio -->
+      <div class="section section--accent" id="section-portfolio">
+        <button
+          class="section-header"
+          aria-expanded="false"
+          data-target="portfolio"
+        >
+          <span class="section-title">TYÖT</span>
+          <span class="section-toggle">+</span>
+        </button>
+        <div class="section-body">
+          <div class="section-inner">
+            <div class="portfolio-content">
+              <div class="portfolio-grid">
+                <!-- item 1 -->
+                <a
+                  href="https://github.com/Juussi96/webui-final-project"
+                  class="portfolio-card-link"
+                >
+                  <div class="portfolio-card">
+                    <div class="portfolio-card-img">
+                      <img
+                        src="pictures/Web_UI_loppu.png"
+                        alt="Web UI project"
+                      />
+                    </div>
+                    <div class="portfolio-card-info">
+                      <div class="portfolio-card-row">
+                        <span class="portfolio-card-title"
+                          >Michael Jordan sivusto</span
+                        >
+                        <span class="portfolio-card-year">2023</span>
+                      </div>
+                      <p class="portfolio-card-role">UI/UX Design, HTML/CSS</p>
+                      <p class="portfolio-card-desc">
+                        Web UI -kurssin lopputyö
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <!-- item 2 -->
+                <a
+                  href="https://github.com/Juussi96/muistilista"
+                  class="portfolio-card-link"
+                >
+                  <div class="portfolio-card">
+                    <div class="portfolio-card-img">
+                      <img
+                        src="pictures/Muistilista.png"
+                        alt="Frontend Svelte project"
+                      />
+                    </div>
+                    <div class="portfolio-card-info">
+                      <div class="portfolio-card-row">
+                        <span class="portfolio-card-title">Muistilista</span>
+                        <span class="portfolio-card-year">2024</span>
+                      </div>
+                      <p class="portfolio-card-role">
+                        Svelte (Javascript), HTML/CSS
+                      </p>
+                      <p class="portfolio-card-desc">
+                        Frontend perusteet -kurssin lopputyö
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <!-- item 3 -->
+                <a
+                  href="https://github.com/Juussi96/Juussi96.github.io"
+                  class="portfolio-card-link"
+                >
+                  <div class="portfolio-card">
+                    <div class="portfolio-card-img">
+                      <img
+                        src="pictures/TC_project.png"
+                        alt="Ticorcorate project"
+                      />
+                    </div>
+                    <div class="portfolio-card-info">
+                      <div class="portfolio-card-row">
+                        <span class="portfolio-card-title"
+                          >TC portfolio - Synerra</span
+                        >
+                        <span class="portfolio-card-year">2025</span>
+                      </div>
+                      <p class="portfolio-card-role">
+                        Frontend, HTML/CSS, Liiketoiminta
+                      </p>
+                      <p class="portfolio-card-desc">
+                        TC S2025 projekti - portfolio
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <!-- item 4 -->
+                <a
+                  href="https://www.figma.com/design/ceWiVMUvEKuQsIXyADmDdH/Lopputy%C3%B6-?node-id=0-1&t=jlYG8k3dJg5rGBLu-1"
+                  class="portfolio-card-link"
+                >
+                  <div class="portfolio-card">
+                    <div class="portfolio-card-img">
+                      <img
+                        src="pictures/SmartSecurity.png"
+                        alt="Web_Ui2 project"
+                      />
+                    </div>
+                    <div class="portfolio-card-info">
+                      <div class="portfolio-card-row">
+                        <span class="portfolio-card-title"
+                          >Lopputyö - Smart Security</span
+                        >
+                        <span class="portfolio-card-year">2024</span>
+                      </div>
+                      <p class="portfolio-card-role">Figma</p>
+                      <p class="portfolio-card-desc">Web Ui 2 - Lopputyö</p>
+                    </div>
+                  </div>
+                </a>
+                <!-- item 5 -->
+                <a
+                  href="https://www.figma.com/design/WwwPXGOpi8b4JgQujS4Hzi/Ohjelmistotuotanto?node-id=0-1&t=tE3YMF0OPgvyjaFx-1"
+                  class="portfolio-card-link"
+                >
+                  <div class="portfolio-card">
+                    <div class="portfolio-card-img">
+                      <img
+                        src="pictures/Kellota.png"
+                        alt="Ohjelmistotuotanto course"
+                      />
+                    </div>
+                    <div class="portfolio-card-info">
+                      <div class="portfolio-card-row">
+                        <span class="portfolio-card-title"
+                          >Kellota - Figma suunnitelma</span
+                        >
+                        <span class="portfolio-card-year">2025</span>
+                      </div>
+                      <p class="portfolio-card-role">Figma</p>
+                      <p class="portfolio-card-desc">
+                        Ohjelmistotuotanto - Lopputyö
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <!-- item 6 -->
+                <a
+                  href="https://www.figma.com/design/PLi5dp0zRmnyFtGBbWtaYz/Sanapilvi_Figma_Mallinnus_Harjoittelu2026?node-id=0-1&t=WNhA79n1GNPfO3n9-1"
+                  class="portfolio-card-link"
+                >
+                  <div class="portfolio-card">
+                    <div class="portfolio-card-img">
+                      <img
+                        src="pictures/Sanapilvi.png"
+                        alt="Harjoittelu 2026"
+                      />
+                    </div>
+                    <div class="portfolio-card-info">
+                      <div class="portfolio-card-row">
+                        <span class="portfolio-card-title"
+                          >Sanapilvi - pedagogiset työkalut</span
+                        >
+                        <span class="portfolio-card-year">2026</span>
+                      </div>
+                      <p class="portfolio-card-role">Figma</p>
+                      <p class="portfolio-card-desc">Harjoittelu S2026</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="section" id="section-skills">
+        <button
+          class="section-header"
+          aria-expanded="false"
+          data-target="skills"
+        >
+          <span class="section-title">TAIDOT</span>
+          <span class="section-toggle">+</span>
+        </button>
+        <div class="section-body">
+          <div class="section-inner">
+            <div class="skills-content">
+              <div class="skills-group">
+                <h3 class="skills-group-title">Design</h3>
+                <div class="skill-list">
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span class="skill-name">UI/UX Design</span
+                      ><span class="skill-pct">80%</span>
+                    </div>
+                    <div class="skill-bar-bg">
+                      <div class="skill-bar-fill" style="width: 80%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span class="skill-name">Figma</span
+                      ><span class="skill-pct">90%</span>
+                    </div>
+                    <div class="skill-bar-bg">
+                      <div class="skill-bar-fill" style="width: 90%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span class="skill-name">Prototyping</span
+                      ><span class="skill-pct">85%</span>
+                    </div>
+                    <div class="skill-bar-bg">
+                      <div class="skill-bar-fill" style="width: 85%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span class="skill-name">Design Systems</span
+                      ><span class="skill-pct">55%</span>
+                    </div>
+                    <div class="skill-bar-bg">
+                      <div class="skill-bar-fill" style="width: 55%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skills-group">
+                <h3 class="skills-group-title">Development</h3>
+                <div class="skill-list">
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span class="skill-name">HTML &amp; CSS</span
+                      ><span class="skill-pct">88%</span>
+                    </div>
+                    <div class="skill-bar-bg">
+                      <div class="skill-bar-fill" style="width: 88%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span class="skill-name">Angular</span
+                      ><span class="skill-pct">35%</span>
+                    </div>
+                    <div class="skill-bar-bg">
+                      <div class="skill-bar-fill" style="width: 35%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span class="skill-name">Javascript</span
+                      ><span class="skill-pct">55%</span>
+                    </div>
+                    <div class="skill-bar-bg">
+                      <div class="skill-bar-fill" style="width: 55%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span class="skill-name">Tailwind CSS</span
+                      ><span class="skill-pct">80%</span>
+                    </div>
+                    <div class="skill-bar-bg">
+                      <div class="skill-bar-fill" style="width: 80%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skills-group">
+                <h3 class="skills-group-title">Muut</h3>
+                <div class="skill-list">
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span class="skill-name">Canva</span
+                      ><span class="skill-pct">70%</span>
+                    </div>
+                    <div class="skill-bar-bg">
+                      <div class="skill-bar-fill" style="width: 70%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span class="skill-name">Motion Design</span
+                      ><span class="skill-pct">70%</span>
+                    </div>
+                    <div class="skill-bar-bg">
+                      <div class="skill-bar-fill" style="width: 70%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span class="skill-name">WordPress</span
+                      ><span class="skill-pct">82%</span>
+                    </div>
+                    <div class="skill-bar-bg">
+                      <div class="skill-bar-fill" style="width: 82%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /sections -->
+
+    <!-- ══ GALLERY ══════════════════════════════════════════════════════ -->
+    <div class="gallery">
+      <div class="gallery-item">
+        <a
+          href="https://www.credly.com/badges/51885272-9b55-4500-9bac-88010c7426fc"
+          ><img
+            src="pictures/aws-academy-graduate-machine-learning-foundations-t.png"
+            alt="Padge - Machine Learning Foundations"
+        /></a>
+      </div>
+      <div class="gallery-item">
+        <a
+          href="https://www.credly.com/badges/ed7dd9e9-9da1-4d7c-8a80-6efb2e208b62"
+          ><img
+            src="pictures/aws-academy-graduate-cloud-foundations-training-bad.png"
+            alt="Padge - Cloud Foundations"
+        /></a>
+      </div>
+      <div class="gallery-item">
+        <a
+          href="https://www.credly.com/badges/05c789e2-2e05-4295-92aa-e24cc2de07f5"
+          ><img
+            src="pictures/aws-academy-graduate-cloud-architecting-training-ba.png"
+            alt="Padge - Cloud Architecting"
+        /></a>
+      </div>
+    </div>
+
+    <!-- ══ FOOTER ════════════════════════════════════════════════════════ -->
+    <footer class="footer">
+      <!-- <span class="footer-name">Jussi Haverinen</span> -->
+      <span class="footer-copy">© 2026 — Jussi Haverinen</span>
+      <!-- <div class="footer-icons">
+        <p>TIIKERI</p>
+      </div> -->
+    </footer>
+
+    <!-- ══ JS ════════════════════════════════════════════════════════════ -->
+  </body>
+</html>
